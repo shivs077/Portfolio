@@ -15,6 +15,10 @@
 
 //Tablets & Small Laptops
 @include mediaMd {
+    // * {
+    //     font-size: 16px;
+    // }
+
     main {
         align-items: center;
         text-align: center;
@@ -38,14 +42,14 @@
     }
 
     .menu-nav {
-        height: 75vh;
+        height: 70vh;
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
 
     }
 
     .menu-branding {
-        height: 25vh;
+        height: 30vh;
         transform: translate3d(100%, 0, 0);
 
         .portrait {
@@ -68,15 +72,29 @@
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-//Smartphones
-@include mediaSm {
-    main#home h1 {
-        margin-top: 10vh;
+    .boxes {
+        div {
+            font-size: 1rem;
+            width: 100%;
+
+        }
     }
 
-    .projects {
-        grid-template-columns: 1fr;
+    //Smartphones
+    @include mediaSm {
+        main {
+            padding: 4rem 2rem;
+
+            &#home h1 {
+                margin-top: 10vh;
+            }
+        }
+
+        .projects {
+            grid-template-columns: 1fr;
+        }
+
+
     }
 }
