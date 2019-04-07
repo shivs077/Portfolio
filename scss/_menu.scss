@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -22,6 +22,7 @@
     transform: rotate(180deg);
 
     .btn-line {
+
       // line 1 - Rotate
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
@@ -107,10 +108,11 @@
       transform: translate3d(0, 0, 0);
     }
 
-    &.current > a {
+    &.current>a {
       color: $secondary-color;
     }
   }
+
   .nav-link {
     display: inline-block;
     position: relative;
@@ -118,7 +120,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
